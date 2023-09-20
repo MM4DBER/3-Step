@@ -1,33 +1,43 @@
 ---
 title: "3-Step ML Auxiliary Variable Integration Using `MplusAutomation`"
 subtitle: "*Adding Covariate and Distal Outcome Variables to Mixture Models*"
-author: "IMMERSE Project: Adam Garber"
+author: "MM4DBER Training Team"
 date: '`r format(Sys.time(), "%B, %d,  %Y")`'
 output:
-  pdf_document: default
-  html_document: default
+  html_document:
+    theme: flatly
+  pdf_document:
+    toc: yes
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
 
 ```{r setup, include=FALSE, eval=TRUE}
-knitr::opts_chunk$set(eval = FALSE, echo = TRUE, message = FALSE, warning = FALSE) 
+knitr::opts_chunk$set(eval = FALSE, echo = TRUE, message = FALSE, warning = FALSE, 
+tidy.opts=list(width.cutoff=60)) 
 library(knitr)
 ```
 
+## This script file `START-3step.Rmd` includes ommitted code. The intention for this activity is to have trainees fill in the missing code while following along with the video. Sections with ommitted code are places in the syntax that will vary based on research context. To check your results compare with script file `FINISH-3step.Rmd`.
+
 # --------------------------------------------------------------------------------------
 
-```{r, echo=FALSE, eval=TRUE, fig.align='center', out.width="40%"}
-include_graphics("figures/IESNewLogo.jpg")
-```
+![](figures/mm4dber_Logo.jpg){style="float: left;" width="300"}
 
-The Institute of Mixture Modeling for Equity-Oriented Researchers, Scholars, and Educators (`IMMERSE`) is an IES funded training grant (R305B220021) to support education scholars in integrating mixture modeling into their research.
+![](figures/NSF-Logo.png){style="float: left;" width="300"}
 
-> Visit our [$\color{blue}{\text{Website}}$](https://immerse.education.ucsb.edu/) to learn more about the IMMERSE project.
+# --------------------------------------------------------------------------------------
 
-> Follow us on [$\color{blue}{\text{Twitter}}$](https://twitter.com/IMMERSE_UCSB) for updates on posted resources!
+> Mixture Modeling for Discipline Based Education Researchers (MM4DBER) is an NSF funded training grant to support STEM Education scholars in integrating mixture modeling into their research.
 
-> Visit our [$\color{blue}{\text{GitHub}}$](https://github.com/immerse-ucsb/) account to follow along with this tutorial & others. 
+#### Download project materials here: [GitHub Repository](https://github.com/MM4DBER/3-Step)
 
-# -------------------------------------------------------------------------------------- 
+#### Follow along: [Video Tutorial](https://youtu.be/MZSFKmTLZRI?si=_eQLhpj046rMPuRM)
+
+#### Return to landing page here: [MM4DBER Landing Page](https://mm4dber.github.io/)
+
+# --------------------------------------------------------------------------------------
 
 ## What is included in this video tutorial?
 
@@ -40,12 +50,6 @@ include_graphics("figures/Variables_table.png")
 ```
 
 \newpage
-
-# --------------------------------------------------------------------------------------
-
-**Follow along! Link to `Github` repository:**
-
-$\color{blue}{\text{https://github.com/immerse-ucsb/3step-ML-auto}}$
 
 # --------------------------------------------------------------------------------------
 
@@ -65,14 +69,14 @@ library(tidyverse)       # Tidyness
 
 **Information about CRCD:** https://www2.ed.gov/about/offices/list/ocr/data.html
 
-**Data access (`R`):** https://github.com/UrbanInstitute/education-data-package-r
+**Data source (`R`):** https://github.com/UrbanInstitute/education-data-package-r
 
 # --------------------------------------------------------------------------------------
 
 Read in CSV data file from the `data` subfolder
 ```{r}
 
-data_3step <- read_csv(here("", ".csv"))
+data_3step <- read_csv(here(" ", " .csv"))
 
 ```
 
@@ -101,13 +105,14 @@ m_step1  <- mplusObject(
     
     classes = c(); 
     
-    !!! All auxiliary variables to be considered in the final model should be listed here !!!
-    auxiliary = lunch_program read_test math_test;",
+    !!! All auxiliary variables to be considered in the final model should be listed below !!!
+  
+    auxiliary = ;",
   
   ANALYSIS = 
    "estimator = mlr; 
     type = mixture; 
-    starts = 500 100;
+    starts = ;
   
     !!! to replicate class order use, `optseed = 887580;` !!!",
   
@@ -117,8 +122,8 @@ m_step1  <- mplusObject(
     Save=cprob;
     Missflag= 999;",
   
-  usevariables = colnames(data_3step),
-  rdata = data_3step)
+  usevariables = colnames(),
+  rdata = )
 
 m_step1_fit <- mplusModeler(m_step1,
                  dataout=here("", ".dat"),
@@ -164,7 +169,7 @@ m_step2  <- mplusObject(
  "nominal=N;
   USEVAR = n;
   missing are all (999); 
-  classes = c(3); ",
+  classes = c( ); ",
   
   ANALYSIS = 
  "estimator = mlr; 

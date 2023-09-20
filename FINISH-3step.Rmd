@@ -1,45 +1,47 @@
 ---
 title: "3-Step ML Auxiliary Variable Integration Using `MplusAutomation`"
 subtitle: "*Adding Covariate and Distal Outcome Variables to Mixture Models*"
-author: "IMMERSE Project: Adam Garber"
+author: "MM4DBER Training Team"
 date: '`r format(Sys.time(), "%B, %d,  %Y")`'
 output:
-  pdf_document: default
-  html_document: default
+  html_document:
+    theme: flatly
+  pdf_document:
+    toc: yes
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
 
 ```{r setup, include=FALSE, eval=TRUE}
-knitr::opts_chunk$set(eval = FALSE, echo = TRUE, message = FALSE, warning = FALSE) 
+knitr::opts_chunk$set(eval = FALSE, echo = TRUE, message = FALSE, warning = FALSE, 
+tidy.opts=list(width.cutoff=60)) 
 library(knitr)
 ```
 
 # --------------------------------------------------------------------------------------
 
-```{r, echo=FALSE, eval=TRUE, fig.align='center', out.width="40%"}
-include_graphics("figures/IESNewLogo.jpg")
-```
+![](figures/mm4dber_Logo.jpg){style="float: left;" width="300"}
 
-The Institute of Mixture Modeling for Equity-Oriented Researchers, Scholars, and Educators (`IMMERSE`) is an IES funded training grant (R305B220021) to support education scholars in integrating mixture modeling into their research.
+![](figures/NSF-Logo.png){style="float: left;" width="300"}
 
-> Visit our [$\color{blue}{\text{Website}}$](https://immerse.education.ucsb.edu/) to learn more about the IMMERSE project.
+# --------------------------------------------------------------------------------------
 
-> Follow us on [$\color{blue}{\text{Twitter}}$](https://twitter.com/IMMERSE_UCSB) for updates on posted resources!
+> Mixture Modeling for Discipline Based Education Researchers (MM4DBER) is an NSF funded training grant to support STEM Education scholars in integrating mixture modeling into their research.
 
-> Visit our [$\color{blue}{\text{GitHub}}$](https://github.com/immerse-ucsb/) account to follow along with this tutorial & others. 
+#### Download project materials here: [GitHub Repository](https://github.com/MM4DBER/3-Step)
 
-# -------------------------------------------------------------------------------------- 
+#### Follow along: [Video Tutorial](https://youtu.be/MZSFKmTLZRI?si=_eQLhpj046rMPuRM)
+
+#### Return to landing page here: [MM4DBER Landing Page](https://mm4dber.github.io/)
+
+# --------------------------------------------------------------------------------------
 
 ## What is included in this video tutorial?
 
 > This `R` tutorial automates the 3-step ML auxiliary variable procedure using the `MplusAutomation` package (Hallquist & Wiley, 2018) to estimate models and extract relevant parameters. To learn more about auxiliary variable integration methods and why multi-step methods are necessary for producing un-biased estimates see Asparouhov & Muthén (2014). 
 
 > The motivation for this tutorial is that conducting the 3-step manually is highly error prone as it requires pulling logit values estimated in the step-1 model and adding them in the model statement of the step-2 model (i.e., lots of copying & pasting). In contrast, this approach is fully replicable and provides clear documentation which translates to more reliable research. Also, it saves time!
-
-# --------------------------------------------------------------------------------------
-
-**Follow along! Link to `Github` repository:**
-
-$\color{blue}{\text{https://github.com/immerse-ucsb/3step-ML-auto}}$
 
 # --------------------------------------------------------------------------------------
 
@@ -59,9 +61,10 @@ library(tidyverse)       # Tidyness
 
 **Information about CRCD:** https://www2.ed.gov/about/offices/list/ocr/data.html
 
-**Data access (`R`):** https://github.com/UrbanInstitute/education-data-package-r
+**Data source (`R`):** https://github.com/UrbanInstitute/education-data-package-r
 
 ```{r, echo=FALSE, eval=TRUE, fig.align='center', out.width="100%"}
+
 include_graphics("figures/Variables_table.png")
 ```
 
