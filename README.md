@@ -6,13 +6,7 @@
 
 #### *Adding Covariate and Distal Outcome Variables to Mixture Models*
 
-#### IMMERSE Project: Adam Garber
-
-- - -
-
-![](figures/mm4dber_Logo.jpg){style="float: left;" width="300"}
-
-![](figures/NSF-Logo.png){style="float: left;" width="300"}
+#### MM4DBER Training Team: Adam Garber
 
 - - -
 
