@@ -4,10 +4,9 @@ subtitle: "*Adding Covariate and Distal Outcome Variables to Mixture Models*"
 author: "MM4DBER Training Team"
 date: '`r format(Sys.time(), "%B, %d,  %Y")`'
 output:
+  pdf_document:
   html_document:
     theme: flatly
-  pdf_document:
-    toc: yes
 editor_options: 
   markdown: 
     wrap: sentence
@@ -19,7 +18,7 @@ tidy.opts=list(width.cutoff=60))
 library(knitr)
 ```
 
-## This script file `START-3step.Rmd` includes ommitted code. The intention for this activity is to have trainees fill in the missing code while following along with the video. Sections with ommitted code are places in the syntax that will vary based on research context. To check your results compare with script file `FINISH-3step.Rmd`.
+### This script file `START-3step.Rmd` includes omitted code. The intention for this activity is to have trainees fill in the missing code while following along with the video. Sections with omitted code are places in the syntax that will vary based on research context. To check your results compare with script file `FINISH-3step.Rmd`.
 
 # --------------------------------------------------------------------------------------
 

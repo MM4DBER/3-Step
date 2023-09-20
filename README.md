@@ -1,4 +1,4 @@
-## Video tutorial repository: "3-Step-ML-auto"
+## Video tutorial repository: "3-Step"
 
 - - -
 
@@ -10,15 +10,20 @@
 
 - - -
 
-![](figures/IESNewLogo.jpg)
+![](figures/mm4dber_Logo.jpg){style="float: left;" width="300"}
 
-The Institute of Mixture Modeling for Equity-Oriented Researchers, Scholars, and Educators (`IMMERSE`) is an IES funded training grant (R305B220021) to support education scholars in integrating mixture modeling into their research.
+![](figures/NSF-Logo.png){style="float: left;" width="300"}
 
-Visit our [Website](https://immerse.education.ucsb.edu/) to learn more about the IMMERSE project.
+- - -
 
-Follow us on [Twitter](https://twitter.com/IMMERSE_UCSB) for updates on posted resources!
+> Mixture Modeling for Discipline Based Education Researchers (MM4DBER) is an NSF funded training grant to support STEM Education scholars in integrating mixture modeling into their research.
 
-Visit our [GitHub](https://github.com/immerse-ucsb/) account to follow along with this tutorial & others. 
+#### Download project materials here: [GitHub Repository](https://github.com/MM4DBER/3-Step)
+
+#### Follow along: [Video Tutorial](https://youtu.be/MZSFKmTLZRI?si=_eQLhpj046rMPuRM)
+
+#### Return to landing page here: [MM4DBER Landing Page](https://mm4dber.github.io/)
+
 
 - - -
 
